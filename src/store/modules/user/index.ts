@@ -7,25 +7,20 @@ import {
 } from '@/api/user';
 import { setToken, clearToken } from '@/utils/auth';
 import { removeRouteListener } from '@/utils/route-listener';
-import { UserState } from './types';
+import { RoleType, UserState } from "./types";
 
 const useUserStore = defineStore('user', {
   state: (): UserState => ({
-    name: undefined,
+    userId: 0,
+    username: undefined,
+    userAccount: undefined,
     avatar: undefined,
-    job: undefined,
-    organization: undefined,
-    location: undefined,
-    email: undefined,
-    introduction: undefined,
-    personalWebsite: undefined,
-    jobName: undefined,
-    organizationName: undefined,
-    locationName: undefined,
+    gender: 0,
     phone: undefined,
-    registrationDate: undefined,
-    accountId: undefined,
-    certification: undefined,
+    email: undefined,
+    nickname: undefined,
+    permission: 0,
+    status: 0,
     role: '',
   }),
 
